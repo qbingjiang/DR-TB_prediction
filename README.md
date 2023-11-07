@@ -6,6 +6,8 @@ We applied the well pre-trained [model](https://github.com/JoHof/lungmask)
 
 ## Hand-crafted feature extraction
 
-## model building (including dimension reduction)
+## Model building (including dimension reduction)
 
-##  [LTRC](https://www.nhlbi.nih.gov/science/lung-tissue-research-consortium-ltrc)
+## Visualization
+
+## Reference
