@@ -1,7 +1,12 @@
 # DR-TB_prediction
 The code will coming soon
+
+## Environments and Requirements
+
 ## Lung segmentation
-We applied the well pre-trained [model](https://github.com/JoHof/lungmask)
+We applied the well pre-trained [model](https://github.com/JoHof/lungmask) 
+
+
 ## Deep learning feature extraction
 
 ## Hand-crafted feature extraction
