@@ -4,6 +4,8 @@ The code will be coming soon!!
 This is a Python implementation of the DLHC model. For the detailed architecture please refer to the original paper. 
 
 ## Environments and Requirements
+# Installation
+pip install -r requirements.txt
 
 
 
