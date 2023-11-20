@@ -391,10 +391,6 @@ if __name__ == '__main__':
     
     path_image = r'/results_data_nii'
     path_mask = r'/results'
-
-    df_image_info={}
-    df_image_info['image'] = find_all_nii(path_image)
-    df_image_info['mask'] = find_all_nii(path_mask)
     image_paths = find_all_nii(path_image)
     mask_paths = find_all_nii(path_mask)
 
