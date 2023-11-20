@@ -1,22 +1,22 @@
 # DR-TB_prediction
-The code will coming soon!!
+The code will be coming soon!!
 
-This is a python implementation of DLHC model. For the detailed architecture please refer to the original paper. 
+This is a Python implementation of the DLHC model. For the detailed architecture please refer to the original paper. 
 
 ## Environments and Requirements
 
 
 
 ## 1 Lung segmentation
-For convenience, we modified the code from the pre-trained [model](https://github.com/JoHof/lungmask). 
+We modified the code from the pre-trained [model](https://github.com/JoHof/lungmask) for convenience. 
 
 
-## Deep learning feature extraction
+## 2 Deep learning feature extraction
 
-## Hand-crafted feature extraction 
+## 3 Hand-crafted feature extraction 
 
-## Model building (including dimension reduction) 
+## 4 Model building (including dimension reduction) 
 
-## Visualization
+## 5 Visualization
 
 ## Reference
