@@ -6,7 +6,7 @@ This is a Python implementation of the DLHC model. For the detailed architecture
 
 ## Introduction&#x20;
 
-A fully automated artificial intelligence framework (DLHC) was proposed and designed to extract comprehensive MDR-TB-related data from CT images for the purpose of predicting MDR-TB status in patients prior to initiating first-line treatment. DLHC utilizes combined power of deep learning features and hand-crafted features for prediction of MDR-TB from CT data. Diverging from traditional radiomic methods, which rely on lesion annotation, our proposed framework operates as an automatic pipeline, exclusively utilizing lung CT scans, eliminating the requirement for manual lesion annotation.&#x20;
+A fully automated artificial intelligence framework (DLHC) was proposed and designed to extract comprehensive MDR-TB-related data from CT images for the purpose of predicting MDR-TB status in patients prior to initiating first-line treatment. DLHC utilizes the combined power of deep learning features and hand-crafted features for prediction of MDR-TB from CT data. 
 
 ## Environments and Requirements
 
