@@ -50,7 +50,9 @@ We modified the code from the pre-trained [model](https://github.com/JoHof/lungm
 
 ## Model building (including dimension reduction)
 
-    0.28566381*log\mbox{-}sigma\mbox{-}3\mbox{-}0\mbox{-}mm\mbox{-}3D\_firstorder\_Maximum + 0.27731318*log\mbox{-}sigma\mbox{-}3\mbox{-}0\mbox{-}mm\mbox{-}3D\_glszm\_ZoneEntropy-0.29851531*wavelet\mbox{-}HHH\_firstorder\_Minimum-0.17285832*wavelet\mbox{-}LLL\_firstorder\_Minimum-0.41540002*square\_gldm\_SmallDependenceHighGrayLevelEmphasis-0.1525067*lbp\mbox{-}3D\mbox{-}m1\_firstorder\_90Percentile+0.07975887*lbp\mbox{-}3D\mbox{-}k\_firstorder\_Skewness-0.68838761
+```math
+0.28566381*log\mbox{-}sigma\mbox{-}3\mbox{-}0\mbox{-}mm\mbox{-}3D\_firstorder\_Maximum + 0.27731318*log\mbox{-}sigma\mbox{-}3\mbox{-}0\mbox{-}mm\mbox{-}3D\_glszm\_ZoneEntropy-0.29851531*wavelet\mbox{-}HHH\_firstorder\_Minimum-0.17285832*wavelet\mbox{-}LLL\_firstorder\_Minimum-0.41540002*square\_gldm\_SmallDependenceHighGrayLevelEmphasis-0.1525067*lbp\mbox{-}3D\mbox{-}m1\_firstorder\_90Percentile+0.07975887*lbp\mbox{-}3D\mbox{-}k\_firstorder\_Skewness-0.68838761
+```
 
 ```math
 0.15431351*DLfeat\_23 + 0.37772542 * DLfeat\_113 - 0.32864266 * DLfeat_114	- 0.16367939 * DLfeat_181 + 0.17699039 * DLfeat_317 - 0.0797936 * DLfeat_361 + 0.29851433 * DLfeat_383 -0.31098062 * DLfeat_479 - 0.70178702
