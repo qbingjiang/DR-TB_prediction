@@ -50,26 +50,35 @@ We modified the code from the pre-trained [model](https://github.com/JoHof/lungm
 
 ## Model building (including dimension reduction)
 
-[11](https://latex.codecogs.com/png.image?\dpi{110}0.28566381*log\mbox{-}sigma\mbox{-}3\mbox{-}0\mbox{-}mm\mbox{-}3D\_firstorder\_Maximum&plus;0.27731318*log\mbox{-}sigma\mbox{-}3\mbox{-}0\mbox{-}mm\mbox{-}3D\_glszm\_ZoneEntropy-0.29851531*wavelet\mbox{-}HHH\_firstorder\_Minimum-0.17285832*wavelet\mbox{-}LLL\_firstorder\_Minimum-0.41540002*square\_gldm\_SmallDependenceHighGrayLevelEmphasis-0.1525067*lbp\mbox{-}3D\mbox{-}m1\_firstorder\_90Percentile&plus;0.07975887*lbp\mbox{-}3D\mbox{-}k\_firstorder\_Skewness-0.68838761&space;)
+[HC_score](https://latex.codecogs.com/png.image?\dpi{110}HC\_score=0.28566381*log\mbox{-}sigma\mbox{-}3\mbox{-}0\mbox{-}mm\mbox{-}3D\_firstorder\_Maximum&plus;0.27731318*log\mbox{-}sigma\mbox{-}3\mbox{-}0\mbox{-}mm\mbox{-}3D\_glszm\_ZoneEntropy-0.29851531*wavelet\mbox{-}HHH\_firstorder\_Minimum-0.17285832*wavelet\mbox{-}LLL\_firstorder\_Minimum-0.41540002*square\_gldm\_SmallDependenceHighGrayLevelEmphasis-0.1525067*lbp\mbox{-}3D\mbox{-}m1\_firstorder\_90Percentile&plus;0.07975887*lbp\mbox{-}3D\mbox{-}k\_firstorder\_Skewness-0.68838761&space;)
 
-```math
-0.28566381*log\mbox{-}sigma\mbox{-}3\mbox{-}0\mbox{-}mm\mbox{-}3D\_firstorder\_Maximum + 0.27731318*log\mbox{-}sigma\mbox{-}3\mbox{-}0\mbox{-}mm\mbox{-}3D\_glszm\_ZoneEntropy-0.29851531*wavelet\mbox{-}HHH\_firstorder\_Minimum-0.17285832*wavelet\mbox{-}LLL\_firstorder\_Minimum-0.41540002*square\_gldm\_SmallDependenceHighGrayLevelEmphasis-0.1525067*lbp\mbox{-}3D\mbox{-}m1\_firstorder\_90Percentile+0.07975887*lbp\mbox{-}3D\mbox{-}k\_firstorder\_Skewness-0.68838761
-```
 
-```math
-0.15431351*DLfeat\_23 + 0.37772542 * DLfeat\_113 - 0.32864266 * DLfeat_114	- 0.16367939 * DLfeat_181 + 0.17699039 * DLfeat_317 - 0.0797936 * DLfeat_361 + 0.29851433 * DLfeat_383 -0.31098062 * DLfeat_479 - 0.70178702
-```
 
-| DLfeat_23  | 0.15431351  |
-| :--------- | :---------- |
-| DLfeat_113 | 0.37772542  |
-| DLfeat_114 | -0.32864266 |
-| DLfeat_181 | -0.16367939 |
-| DLfeat_317 | 0.17699039  |
-| DLfeat_361 | -0.0797936  |
-| DLfeat_383 | 0.29851433  |
-| DLfeat_479 | -0.31098062 |
-| Intercept  | -0.70178702 |
+[DL_score](https://latex.codecogs.com/png.image?\dpi{110}DL\_score=0.15431351*DLfeat\_23&plus;0.37772542*DLfeat\_113-0.32864266*DLfeat_114-0.16367939*DLfeat\_181&plus;0.17699039*DLfeat\_317-0.0797936*DLfeat\_361&plus;0.29851433*DLfeat\_383-0.31098062*DLfeat\_479-0.70178702)
+
+| **Feature** | **Coefficient** |
+| :---------- | :-------------- |
+| DLfeat_23   | 0.15431351      |
+| DLfeat_113  | 0.37772542      |
+| DLfeat_114  | -0.32864266     |
+| DLfeat_181  | -0.16367939     |
+| DLfeat_317  | 0.17699039      |
+| DLfeat_361  | -0.0797936      |
+| DLfeat_383  | 0.29851433      |
+| DLfeat_479  | -0.31098062     |
+| Intercept   | -0.70178702     |
+
+
+| **Feature**                                      | **Coefficient** |
+| :----------------------------------------------- | :-------------- |
+| log-sigma-3-0-mm-3D_firstorder_Maximum           | 0.28566381      |
+| log-sigma-3-0-mm-3D_glszm_ZoneEntropy            | 0.27731318      |
+| wavelet-HHH_firstorder_Minimum                   | -0.29851531     |
+| wavelet-LLL_firstorder_Minimum                   | -0.17285832     |
+| square_gldm_SmallDependenceHighGrayLevelEmphasis | -0.41540002     |
+| lbp-3D-m1_firstorder_90Percentile                | -0.1525067      |
+| lbp-3D-k_firstorder_Skewness                     | 0.07975887      |
+| Intercept                                        | -0.68838761     |
 
 ## Visualization
 
