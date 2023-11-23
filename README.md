@@ -50,6 +50,8 @@ We modified the code from the pre-trained [model](https://github.com/JoHof/lungm
 
 ## Model building (including dimension reduction)
 
+[11](https://latex.codecogs.com/png.image?\dpi{110}0.28566381*log\mbox{-}sigma\mbox{-}3\mbox{-}0\mbox{-}mm\mbox{-}3D\_firstorder\_Maximum&plus;0.27731318*log\mbox{-}sigma\mbox{-}3\mbox{-}0\mbox{-}mm\mbox{-}3D\_glszm\_ZoneEntropy-0.29851531*wavelet\mbox{-}HHH\_firstorder\_Minimum-0.17285832*wavelet\mbox{-}LLL\_firstorder\_Minimum-0.41540002*square\_gldm\_SmallDependenceHighGrayLevelEmphasis-0.1525067*lbp\mbox{-}3D\mbox{-}m1\_firstorder\_90Percentile&plus;0.07975887*lbp\mbox{-}3D\mbox{-}k\_firstorder\_Skewness-0.68838761&space;)
+
 ```math
 0.28566381*log\mbox{-}sigma\mbox{-}3\mbox{-}0\mbox{-}mm\mbox{-}3D\_firstorder\_Maximum + 0.27731318*log\mbox{-}sigma\mbox{-}3\mbox{-}0\mbox{-}mm\mbox{-}3D\_glszm\_ZoneEntropy-0.29851531*wavelet\mbox{-}HHH\_firstorder\_Minimum-0.17285832*wavelet\mbox{-}LLL\_firstorder\_Minimum-0.41540002*square\_gldm\_SmallDependenceHighGrayLevelEmphasis-0.1525067*lbp\mbox{-}3D\mbox{-}m1\_firstorder\_90Percentile+0.07975887*lbp\mbox{-}3D\mbox{-}k\_firstorder\_Skewness-0.68838761
 ```
