@@ -51,8 +51,11 @@ We modified the code from the pre-trained [model](https://github.com/JoHof/lungm
 
 To identify robust features across VOIs defined by different annotators, a consistency analysis was performed for radiomics features. Only features with a Pearson correlation coefficient > 0.9 with other features were excluded from feature selection. Feature selection was performed separately for DL and HC features. Least Absolute Shrinkage and Selection Operator (LASSO), with penalty parameter tuning conducted by 10-fold cross-validation, was used for feature selection. To determine the importance of features, the LASSO regression was iterated 10 times, with votes being accumulated. Features that received more than 20 votes were considered as the most valuable feature set for predicting MDR-TB. Subsequently, two unimodal models (DL and HC) for predicting MDR-TB were calculated with a linear combination of the final selection of features and multiplied by their normalized coefficients using the multivariable logistic regression model. Finally, the DLHC logistic model was built based on DL score and HC score for predicting MDR-TB, in which the scores were computed via a weighted linear combination of the selected texture features and their corresponding coefficients.
 
-Finally, [HC_score](https://latex.codecogs.com/png.image?\dpi{110}HC\_score=0.28566381*log\mbox{-}sigma\mbox{-}3\mbox{-}0\mbox{-}mm\mbox{-}3D\_firstorder\_Maximum&plus;0.27731318*log\mbox{-}sigma\mbox{-}3\mbox{-}0\mbox{-}mm\mbox{-}3D\_glszm\_ZoneEntropy-0.29851531*wavelet\mbox{-}HHH\_firstorder\_Minimum-0.17285832*wavelet\mbox{-}LLL\_firstorder\_Minimum-0.41540002*square\_gldm\_SmallDependenceHighGrayLevelEmphasis-0.1525067*lbp\mbox{-}3D\mbox{-}m1\_firstorder\_90Percentile&plus;0.07975887*lbp\mbox{-}3D\mbox{-}k\_firstorder\_Skewness-0.68838761&space;) and [DL_score](https://latex.codecogs.com/png.image?\dpi{110}DL\_score=0.15431351*DLfeat\_23&plus;0.37772542*DLfeat\_113-0.32864266*DLfeat_114-0.16367939*DLfeat\_181&plus;0.17699039*DLfeat\_317-0.0797936*DLfeat\_361&plus;0.29851433*DLfeat\_383-0.31098062*DLfeat\_479-0.70178702) were calculated by their Logistic regression. 
+Finally, [HC_score](https://latex.codecogs.com/png.image?\dpi{110}HC\_score=0.28566381*log\mbox{-}sigma\mbox{-}3\mbox{-}0\mbox{-}mm\mbox{-}3D\_firstorder\_Maximum&plus;0.27731318*log\mbox{-}sigma\mbox{-}3\mbox{-}0\mbox{-}mm\mbox{-}3D\_glszm\_ZoneEntropy-0.29851531*wavelet\mbox{-}HHH\_firstorder\_Minimum-0.17285832*wavelet\mbox{-}LLL\_firstorder\_Minimum-0.41540002*square\_gldm\_SmallDependenceHighGrayLevelEmphasis-0.1525067*lbp\mbox{-}3D\mbox{-}m1\_firstorder\_90Percentile&plus;0.07975887*lbp\mbox{-}3D\mbox{-}k\_firstorder\_Skewness-0.68838761&space;) and [DL_score](https://latex.codecogs.com/png.image?\dpi{110}DL\_score=0.15431351*DLfeat\_23&plus;0.37772542*DLfeat\_113-0.32864266*DLfeat_114-0.16367939*DLfeat\_181&plus;0.17699039*DLfeat\_317-0.0797936*DLfeat\_361&plus;0.29851433*DLfeat\_383-0.31098062*DLfeat\_479-0.70178702) were calculated by their Logistic regression. The coefficients are showed in Table 1 and 2. 
 
+<div align="center">
+
+Table 1: The coefficient of the DL model.
 | **Feature** | **Coefficient** |
 | :---------- | :-------------- |
 | DLfeat_23   | 0.15431351      |
@@ -65,7 +68,12 @@ Finally, [HC_score](https://latex.codecogs.com/png.image?\dpi{110}HC\_score=0.28
 | DLfeat_479  | -0.31098062     |
 | Intercept   | -0.70178702     |
 
+</div>
 
+
+<div align="center">
+
+Table 2: The coefficient of the HC model.
 | **Feature**                                      | **Coefficient** |
 | :----------------------------------------------- | :-------------- |
 | log-sigma-3-0-mm-3D_firstorder_Maximum           | 0.28566381      |
@@ -77,10 +85,24 @@ Finally, [HC_score](https://latex.codecogs.com/png.image?\dpi{110}HC\_score=0.28
 | lbp-3D-k_firstorder_Skewness                     | 0.07975887      |
 | Intercept                                        | -0.68838761     |
 
+</div>
+
 ## Visualization
 This serves as a visualization tool for deep learning and hand-crafted features. Pyradiomics was employed for feature extraction, and additional details regarding parameter settings can be found at https://pyradiomics.readthedocs.io/.
 
+<div align="center">
+
 ![](https://github.com/qbingjiang/DR-TB_prediction/blob/main/visualization/feature%20mapping.png)
+Figure 1: . Insight of each feature of two MDR-TB and two DS-TB cases in axial plane. The numbers following the letters correspond to case 1 and case 2, respectively.
+(a) The CT image. 
+(b)-(h) feature maps of log-sigma-3-0-mm-3D_firstorder_Maximum, log-sigma-3-0-mm-3D_glszm_ZoneEntropy, wavelet-HHH_firstorder_Minimum, wavelet-LLL_firstorder_Minimum, square_gldm_SmallDependenceHighGrayLevelEmphasis, lbp-3D-m1_firstorder_90Percentile, and lbp-3D-k_firstorder_Skewness, respectively. 
+(i) logistic combination of HC feature maps. 
+(j-q) feature map of feature map of DLfeat_23, DLfeat_113, DLfeat_114, DLfeat_181, DLfeat_317, DLfeat_361, DLfeat_383, and DLfeat_479, respectively. 
+(r) logistic combination of DL feature maps.
+NOTE: DLHC Suspicious area is a logistic combination of the one from HC and DL feature maps. 
+  
+</div>
+
 
 ## Reference
 
