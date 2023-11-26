@@ -29,11 +29,11 @@ pip install -r requirements.txt
 
 ## Lung segmentation
 
-We modified the code from the pre-trained [model](https://github.com/JoHof/lungmask) for convenience.
+We modified the code from the pre-trained [model](https://github.com/JoHof/lungmask) [1] for convenience.
 
 ## Deep learning feature extraction
 
-3D Residual network (3D Resnet) with a pre-trained [weight ](https://pytorch.org/vision/main/models/generated/torchvision.models.video.r3d_18.html) was employed to extract the deep learning features from the lung region. Finally, a total of 512 features were extracted from each lung region.&#x20;
+3D Residual network (3D Resnet) [2] with a pre-trained [weight ](https://pytorch.org/vision/main/models/generated/torchvision.models.video.r3d_18.html) was employed to extract the deep learning features from the lung region. Finally, a total of 512 features were extracted from each lung region.&#x20;
 
 ## Hand-crafted feature extraction
 [PyRadiomics](http://PyRadiomics.readthedocs.io/en/latest/) package was applied to extract handcrafted features from the regions of interest (ROIs) (from the lung region). A total of 1906 quantitative features were calculated from each lung ROI, encompassing four categories: (1) 14 shape-based 3D features, (2) 18 first-order statistics features, (3) 68 texture-based features, and (4) 1806 transformation features (original, LoG, Wavelet, Square, SquareRoot, Logarithm, Exponential, Gradient, LBP3D). The PyRadiomics documentation provides detailed information about these features. 
@@ -92,7 +92,7 @@ Table 3: The coefficient of the DLHC model.
 
 
 ## Visualization
-This serves as a visualization tool for DL, HC and DLHC features. For the HC features, Pyradiomics was employed for feature extraction, and additional details regarding parameter settings can be found at https://pyradiomics.readthedocs.io/. For the DL features, the intermediate feature maps in the last layer of the ResNet3D from the Axial plane are showed, which illustrates that the DL model actually learned the structural representation of TB-related region. The intermediate results demonstrate the feasibility of extracting image features by the proposed framework. 
+This serves as a visualization tool for DL, HC and DLHC features. For the HC features, Pyradiomics was employed for feature extraction, and additional details regarding parameter settings can be found at https://pyradiomics.readthedocs.io/. For the DL features, the intermediate feature maps in the last layer of the 3D ResNet from the Axial plane are showed, which illustrates that the DL model actually learned the structural representation of TB-related region. The intermediate results demonstrate the feasibility of extracting image features by the proposed framework. 
 
 
 <div align="center">
@@ -111,8 +111,8 @@ NOTE: DLHC Suspicious area is a logistic combination of the one from HC and DL f
 
 ## Reference
 
-- [lungmask](https://github.com/JoHof/lungmask)
+- [1] Hofmanninger J, Prayer F, Pan J, Röhrich S, Prosch H, Langs G. Automatic lung segmentation in routine imaging is primarily a data diversity problem, not a methodology problem. Eur Radiol Exp 2020; 4: 50.
+- [2] Tran D, Wang H, Torresani L, Ray J, Lecun Y, Paluri M. A Closer Look at Spatiotemporal Convolutions for Action Recognition. Proceedings of the IEEE Computer Society Conference on Computer Vision and Pattern Recognition 2018; 6450–6459.
 
-- [Resnet 3D](https://pytorch.org/vision/main/models/generated/torchvision.models.video.r3d_18.html)
 
 ###
