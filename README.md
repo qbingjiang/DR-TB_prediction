@@ -92,7 +92,8 @@ Table 3: The coefficient of the DLHC model.
 
 
 ## Visualization
-This serves as a visualization tool for deep learning and hand-crafted features. Pyradiomics was employed for feature extraction, and additional details regarding parameter settings can be found at https://pyradiomics.readthedocs.io/.
+This serves as a visualization tool for DL, HC and DLHC features. For the HC features, Pyradiomics was employed for feature extraction, and additional details regarding parameter settings can be found at https://pyradiomics.readthedocs.io/. For the DL features, the intermediate feature maps in the last layer of the ResNet3D from the Axial plane are showed, which illustrates that the DL model actually learned the structural representation of TB-related region. The intermediate results demonstrate the feasibility of extracting image features by the proposed framework. 
+
 
 <div align="center">
 
