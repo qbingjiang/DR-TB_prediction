@@ -13,10 +13,10 @@ from sklearn.linear_model import LogisticRegression
 
 from sklearn.feature_selection import SelectFromModel
 
-from sklearn.metrics import roc_auc_score
+from sklearn.metrics import roc_auc_score 
 
 import warnings
-warnings.filterwarnings("ignore")  # 忽略UserWarning兼容性警告
+warnings.filterwarnings("ignore") 
 
 
 # ### Remove correlated features
