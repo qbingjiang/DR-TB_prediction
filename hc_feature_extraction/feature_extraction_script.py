@@ -9,7 +9,7 @@ import SimpleITK as sitk
 
 import scipy
 
-def find_all_nii(path_image):
+def find_all_nii(path_image): 
     folder_1_list = []
     for subdir, dirs, files in os.walk(path_image):
         for file in files:
