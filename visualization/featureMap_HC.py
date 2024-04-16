@@ -25,13 +25,13 @@ params_file  = './hc_feature_extraction/feature_extraction_parameters_example.ya
 # # File where the extracted pyradiomics features will be stored
 label=3
 
-def read_nii(path):   ##bj
+def read_nii(path):   
     input_image = sitk.ReadImage(path)
     inimg_raw = sitk.GetArrayFromImage(input_image)
     directions = np.asarray(input_image.GetDirection())
     if len(directions) == 9:
         inimg_raw = np.flip(inimg_raw, np.where(directions[[0,4,8]][::-1]<0)[0]) 
-    return inimg_raw    ###bj ^1
+    return inimg_raw    
 
 def save_results_to_pandas(data, save_path=None):
 
