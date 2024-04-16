@@ -8,7 +8,7 @@ import itertools
 from torch.utils.data import DataLoader
 from torch.utils.data import ConcatDataset 
 # from dataset_2timePoints import data_set
-from dataset import data_set 
+from dataset import data_set  
 
 class TwoStreamBatchSampler(Sampler):
     """Iterate two sets of indices
